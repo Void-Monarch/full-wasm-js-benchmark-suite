@@ -1,0 +1,16 @@
+{
+  "name": "wasm-js-benchmark-suite",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build:wasm": "cd wasm_module && wasm-pack build --target web",
+    "start:chromium": "node runner.js chromium",
+    "start:firefox": "node runner.js firefox",
+    "start:webkit": "node runner.js webkit"
+  },
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "http-server": "^14.1.1",
+    "playwright": "^1.41.2"
+  }
+}

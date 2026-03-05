@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WASM vs JS Benchmarks</title>
+</head>
+
+<body>
+
+<h2>Running Benchmarks...</h2>
+
+<script type="module">
+
+import init, * as wasmModule from "./wasm_module/pkg/wasm_module.js";
+
+async function start() {
+
+    // initialize wasm
+    await init();
+
+    // expose wasm globally
+    window.wasm = wasmModule;
+
+    // load benchmark script
+    const script = document.createElement("script");
+    script.src = "./benchmark.js";
+
+    script.onload = () => {
+        console.log("benchmark.js loaded");
+    };
+
+    document.body.appendChild(script);
+}
+
+start();
+
+</script>
+
+</body>
+</html>

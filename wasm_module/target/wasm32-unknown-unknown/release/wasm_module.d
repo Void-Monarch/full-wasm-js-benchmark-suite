@@ -1,0 +1,1 @@
+D:\Education\MCA\Research\ Paper\Benchmark\full-wasm-js-benchmark-suite\wasm_module\target\wasm32-unknown-unknown\release\wasm_module.wasm: D:\Education\MCA\Research\ Paper\Benchmark\full-wasm-js-benchmark-suite\wasm_module\src\lib.rs
